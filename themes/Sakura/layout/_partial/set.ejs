@@ -1,0 +1,166 @@
+<div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
+                class="iconfont icon-gear inline-block rotating"></i> </span></div>
+</div>
+<style>
+    .changeSkin {
+	position: fixed;
+	bottom: 0;
+	right: 0px;
+	width: auto;
+	height: auto;
+	z-index: 99;
+	font-family: 'Ubuntu';
+	padding: 10px 20px;
+	transiton-property: right;
+	transition-duration: .3s, .3s
+}
+
+.changeSkin .keys {
+	position: relative;
+	z-index: 99
+}
+
+.changeSkin .keys span {
+	cursor: pointer
+}
+
+.changeSkin-gear {
+	position: fixed;
+	bottom: -999px;
+	right: 5px;
+	width: auto;
+	height: auto;
+	z-index: 99;
+	visibility: hidden;
+	white-space: nowrap;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 10px 10px 0 0
+}
+
+.changeSkin .keys {
+	position: relative;
+	z-index: 99
+}
+
+.changeSkin .keys span {
+	cursor: pointer
+}
+
+.changeSkin .close-skinMenu {
+	position: relative;
+	z-index: 99;
+	cursor: pointer
+}
+
+.keys-line-add {
+	text-align: right;
+	margin-right: 22px
+}
+
+@media (max-width:800px) {
+	.changeSkin-gear span:before {
+		content: ""
+	}
+
+	.changeSkin i {
+		font-size: 20px
+	}
+
+	.changeSkin-gear i {
+		font-size: 20px
+	}
+}
+
+position:relative;
+z-index:99;
+cursor:pointer;
+}
+
+.changeSkin-gear span:before {
+	content: "åˆ‡æ¢ä¸»é¢˜ | Change Skin "
+}
+
+@media (max-width:800px) {
+	.changeSkin-gear span:before {
+		content: ""
+	}
+
+	.changeSkin i {
+		font-size: 20px
+	}
+
+	.changeSkin-gear i {
+		font-size: 20px
+	}
+}
+
+.img-preload {
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+.rotating {
+	-webkit-animation: rotating 3s linear infinite;
+	-moz-animation: rotating 3s linear infinite;
+	-ms-animation: rotating 3s linear infinite;
+	-o-animation: rotating 3s linear infinite;
+	animation: rotating 3s linear infinite
+}
+
+.inline-block {
+	display: inline-block
+}
+
+.block {
+	display: block
+}
+
+.center-text {
+	margin: auto;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 80px;
+	text-transform: uppercase
+}
+
+
+
+.code-block-fullscreen-html-scroll {
+	overflow: hidden
+}
+
+</style>
