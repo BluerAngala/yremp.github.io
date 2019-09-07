@@ -388,10 +388,9 @@ player:
 ......
 ......
 ......
- <!-- 下面两行为了实现换肤功能 -->
+ <!-- 实现换肤功能 -->
   <%- partial('_partial/setdisplay') %> 
   <%- partial('_partial/set', null, {cache: !config.relative_link}) %>
-
   <%- partial('_partial/mheader', null, {cache: !config.relative_link}) %>
   <%- partial('_partial/aplayer', null, {cache: !config.relative_link}) %> 
 </body>
@@ -421,7 +420,9 @@ player:
             <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
         </ul>
     </div>
+</div>   
 <canvas id="night-mode-cover"></canvas>
+
 ```
 ## 十五：评论不在白名单问题
 首先，和评论相关的配置在：<font color=	#FF1493 size=3 face="黑体"> /themes/sakura/config.yml </font>

@@ -58,8 +58,8 @@ social:
   github: {url: https://github.com/yremp, img:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/github.png}
   wangyiyun: {url: https://music.163.com/, img:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/wangyiyun.png}
   zhihu: {url: https://www.zhihu.com/, img:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/zhihu.png}
-  qq: {url: /#, qrcode: /img/custom/qq.png, img:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/qq.png}
-  wechat: {url: /#, qrcode: /img/custom/wechat.png, img:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/wechat.png}
+  qq: {url: /#, qrcode:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/qq.png, img:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/qq.png}
+  wechat: {url: /#, qrcode:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/wechat.png, img:  https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/wechat.png}
 
 #social  url, img 移动端配置
 msocial:
