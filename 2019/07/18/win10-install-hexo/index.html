@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Win10安装Hexo | yremp</title><meta name="description" content="很多人想要使用Hexo+Github搭建自己的博客，但是没有什么计算机基础，并且网上很多教程不完整。导致他们不知道 Win10安装Hexo 的方法，那么接下来就给大家带来完整的 Windows安装Hexo 图文教程，即使是小白也能很快搭建自己的博客。"><meta name="keywords" content="web"><meta name="author" content="yremp"><meta name="copyright" content="yremp"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://yremp.live/wp-content/uploads/2019/09/logo-04-e1567837918204.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="/2019/07/18/win10-install-hexo/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Win10安装Hexo"><meta name="twitter:description" content="很多人想要使用Hexo+Github搭建自己的博客，但是没有什么计算机基础，并且网上很多教程不完整。导致他们不知道 Win10安装Hexo 的方法，那么接下来就给大家带来完整的 Windows安装Hexo 图文教程，即使是小白也能很快搭建自己的博客。"><meta name="twitter:image" content="https://yremp.live/wp-content/uploads/2019/07/mingri-e1566226728786.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Win10安装Hexo"><meta property="og:url" content="/2019/07/18/win10-install-hexo/"><meta property="og:site_name" content="yremp"><meta property="og:description" content="很多人想要使用Hexo+Github搭建自己的博客，但是没有什么计算机基础，并且网上很多教程不完整。导致他们不知道 Win10安装Hexo 的方法，那么接下来就给大家带来完整的 Windows安装Hexo 图文教程，即使是小白也能很快搭建自己的博客。"><meta property="og:image" content="https://yremp.live/wp-content/uploads/2019/07/mingri-e1566226728786.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="Spring Boot 日志配置" href="/2019/07/23/spring-boot-logs/"><link rel="next" title="Linux 下安装 Hexo" href="/2019/07/17/linux-install-hexo/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'false',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Bookmark',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days'
+
+  
+}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">安装流程介绍：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">Step 1：安装Git工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">Step 2：注册Github账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">Step 3：下载配置Nodejs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.1.</span> <span class="toc-text">下载Nodejs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.2.</span> <span class="toc-text">配置Nodejs环境变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">Step :4：安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">6.</span> <span class="toc-text">Step 5：SSH配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">7.</span> <span class="toc-text">Step 6：将博客部署到Github</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">7.1.</span> <span class="toc-text">新建仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">7.2.</span> <span class="toc-text">修改配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">7.3.</span> <span class="toc-text">开始部署</span></a></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://yremp.live/wp-content/uploads/2019/07/mingri-e1566226728786.jpg)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">yremp</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><div class="menu_mask"></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item text-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">23</div></a></div></div><div class="mobile_data_item text-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">7</div></a></div></div><div class="mobile_data_item text-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">6</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Win10安装Hexo</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-07-18<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> Updated 2019-09-09</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Hexo/">Hexo</a></span></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><!-- wp:list -->
+<ul><li> 很多人想要使用Hexo+Github搭建自己的博客，但是没有什么计算机基础，并且网上很多教程不完整。导致他们不知道 Win10安装Hexo 的方法，那么接下来就给大家带来完整的 Windows安装Hexo 图文教程，即使是小白也能很快搭建自己的博客。 </li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>安装流程介绍：</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>没有Github账号需要先注册Github账号</li><li>安装Git</li><li>下载安装Nodejs</li><li>安装Hexo</li><li>SSH相关配置</li><li>将博客部署到Github</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Step 1：安装Git工具</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>  为什么先推荐安装Git呢？因为下载速度很慢，我当时也下载了很长时间。点击<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git官网</a>下载对应的版本，win10一般都是64位。下载完成后安装的时候按照默认提示直接next即可。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Step 2：注册Github账号</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>  本教程主要针对新手，所以大多数人可能并没有注册Github账号，所以需要注册一个Github账号，记得注册的时候用户名要想好，后面访问博客的地址和这个有直接关系，点击进入<a href="https://github.com/" target="_blank" rel="noopener">Github官网</a>，开始注册。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Step 3：下载配置Nodejs</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>下载Nodejs</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>  Hexo主要依赖于Nodejs环境，所以这个必不可少。直接进入<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Nodejs官网</a>，下载压缩包，下载完成后解压到一个指定的目录，这个目录必须记住，因为后面需要配置环境变量，需要用到Nodejs目录路径。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":228,"width":580,"height":299} -->
+<figure class="wp-block-image is-resized"><img src="http://39.105.173.178/wp-content/uploads/2019/07/node01-1024x528.png" alt class="wp-image-228" width="580" height="299"><figcaption>这是我的Nodejs解压以后放到了E盘下面，并且重命名为node</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":4} -->
+<h4>配置Nodejs环境变量</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>在我的电脑或者文件管理器，右键-&gt;属性</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":229} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/07/node02-1024x556.png" alt class="wp-image-229"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>会进入下面的界面：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":230} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/07/node03-1024x540.png" alt class="wp-image-230"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>点击高级系统设置:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":231} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/07/node04.png" alt class="wp-image-231"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>点击环境变量：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":232} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/07/node05.png" alt class="wp-image-232"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>在系统环境变量中找到path，点击编辑：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":233} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/07/node06.png" alt class="wp-image-233"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>点击新建，并且加上上面所示的路径，也就是我们的Nodejs的路径，然后一直确定，大概需要确定三次。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p> Git安装完成，在任意位置，比如桌面，单击鼠标右键，点击Git Brash Here，依次执行：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>node -v
+npm -v</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>如果出现对应版本则表示安装成功</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Step :4：安装Hexo</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>在Git Brash 执行如下命令：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>npm install -g hexo</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>等待安装完成后 ,再次进入到系统环境变量配置：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":233} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/07/node06.png" alt class="wp-image-233"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>添加图上所标示的下一个路径：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>E:\node\node_modules\hexo\bin</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>不过需要根据你的实际情况修改一下：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>你的Nodejs路径\node_modules\hexo\bin</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>添加完成后依次确定保存配置退出</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在Git Brash 里面 输入 </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>hexo -v</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>出现对应的版本说明则表示安装配置成功</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在我电脑任意磁盘位置新建一个文件夹，名字随意，这个是作为你的博客根目录，比如我的:Blog,新建完成选中Blog，单击鼠标右键，Git Brash Here,执行如下代码</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>hexo init</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>等待下载完成后，输入 </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>hexo s --debug -p 8888</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>在你的浏览器输入：localhost:8888 就可以在本地看到你的博客</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Step 5：SSH配置</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>因为我们需要部署到你的github仓库，每次更改都要deploy ，如果不配置ssh key 每次你都需要输入github 账号密码，如果你觉得无所谓或者麻烦也可以跳过此步骤。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在Git Brash 中 依次输入：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>git config --global user.name yourname
+git config --global user.email youremail</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph {"textColor":"cyan-bluish-gray"} -->
+<p class="has-text-color has-cyan-bluish-gray-color">上面的yourname 和 youremail分别指你的github用户名以及github绑定的邮箱</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>然后再执行如下行命令生成密匙和公匙：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>ssh-keygen -t rsa -C "email"
+</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>执行了这个命令会提示存储路径和密码以及确认密码：你连续按三次Enter就好，然后执行如下命令打开公匙文件：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>vim /c/Users/73778/.ssh/id_rsa.pub</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>这个路径你可以在上面的提示里面复制，这是默认地址，不同电脑不一样，你就复制它提示的路径：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":235} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/07/ssh01.png" alt class="wp-image-235"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>打开后复制里面的内容：（下面很多数据均来自我的另一个教程<a href="http://39.105.173.178/install-hexo-on-linux/" target="_blank" rel="noopener">【 Linux安装Hexo 】</a>，这些步骤是一样的）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":107} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/06/图片3-1024x525.png" alt class="wp-image-107"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>然后到你的github主页点击右上角头像，setting -&gt; SSH and GPG keys，新建SSH key</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":105} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/06/图片5-1024x503.png" alt class="wp-image-105"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>上面名字随意，下面把刚才复制的公匙内容复制进去，添加SSH key。完成以后，执行以下代码：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>ssh -T git@github.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>会有如下提示：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>The authenticity of host 'github.com (52.74.223.119)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)?</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>输入：yes，会有以下提示：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>Hi yremp2! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>则表示配置成功，就可以下一步操作了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Step 6：将博客部署到Github</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>新建仓库</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p> 在Github主页点击头像，选择 Your repository，然后new 一个新的仓库，注意这个新仓库有特定的格式：你的用户名.github.io，我后面的例子都将使用我的小号yremp2，所以我的仓库名字：yremp2.github.io 。 </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>修改配置文件</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>在你的博客根目录（我的：Blog）下找到 _config.yml， 可以用记事本打开，在最下方找到：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>deploy:
+  type:</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>修改为：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>deploy:
+  type: git
+  repo: git@github.com:yremp2/yremp2.github.io.git </code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>repo 就是 yremp2.github.io 这个仓库的地址，如何获取如下：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":111} -->
+<figure class="wp-block-image"><img src="http://39.105.173.178/wp-content/uploads/2019/06/图片6-1024x517.png" alt class="wp-image-111"></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>注意配置文件里面所有 : 后面都有一个空格，没有会出错</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>开始部署</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>在博客根目录Blog下依次执行如下命令：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>hexo clean
+hexo g
+hexo d</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>如果在执行hexo d有如下错误：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>ERROR Deployer not found: git</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>请执行以下命令：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>npm install --save hexo-deployer-git</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>打开浏览器，访问 yremp2.github.io ,这里将请按照 你的github同户名.github.io 输入，就可以访问你的博客啦。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>同时博主还写了以下文章，有兴趣的话可以去参考一下：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li><a href="https://yremp.live/linux-install-hexo/" target="_blank" rel="noopener">Linux下安装Hexo</a></li><li><a href="https://yremp.live/hexo-upload/" target="_blank" rel="noopener">Hexo编写上传文章</a></li><li><a href="https://yremp.live/hexo-theme/" target="_blank" rel="noopener">Hexo更换主题</a></li></ol>
+<!-- /wp:list -->
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">yremp</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="/2019/07/18/win10-install-hexo/">/2019/07/18/win10-install-hexo/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/web/">web    </a></div><div class="post_share"><div class="social-share" data-image="https://yremp.live/wp-content/uploads/2019/07/mingri-e1566226728786.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2019/07/23/spring-boot-logs/"><img class="prev_cover" src="https://yremp.live/wp-content/uploads/2019/09/cover06-e1567416488623.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>Spring Boot 日志配置</span></div></a></div><div class="next-post pull-right"><a href="/2019/07/17/linux-install-hexo/"><img class="next_cover" src="https://yremp.live/wp-content/uploads/2019/08/deepin.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>Linux 下安装 Hexo</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2019/07/24/spring-boot-thymeleaf/" title="Spring Boot Thymeleaf模板引擎"><img class="relatedPosts_cover " src="https://yremp.live/wp-content/uploads/2019/08/cover02-1024x635.png"><div class="relatedPosts_title">Spring Boot Thymeleaf模板引擎</div></a></div><div class="relatedPosts_item"><a href="/2019/08/18/hexo-theme/" title="Hexo更换主题"><img class="relatedPosts_cover " src="https://yremp.live/wp-content/uploads/2019/08/pic-e1566226464550.jpg"><div class="relatedPosts_title">Hexo更换主题</div></a></div><div class="relatedPosts_item"><a href="/2019/07/01/gitalk/" title="Hexo-Sakura安装Gitalk"><img class="relatedPosts_cover " src="https://cdn.jsdelivr.net/gh/yremp/resource@4.3/img/posts/gitalkcover.png"><div class="relatedPosts_title">Hexo-Sakura安装Gitalk</div></a></div><div class="relatedPosts_item"><a href="/2019/06/24/jsDeliver+github/" title="jsDeliver+github使用教程"><img class="relatedPosts_cover " src="https://upload.cc/i1/2019/05/24/68p7nf.png"><div class="relatedPosts_title">jsDeliver+github使用教程</div></a></div><div class="relatedPosts_item"><a href="/2019/08/16/hexo-upload/" title="Hexo编写上传文章"><img class="relatedPosts_cover " src="https://yremp.live/wp-content/uploads/2019/08/pic03-e1566226484552.jpg"><div class="relatedPosts_title">Hexo编写上传文章</div></a></div><div class="relatedPosts_item"><a href="/2019/08/19/jsproxy/" title="Jsproxy 通过JS实现浏览器在线代理"><img class="relatedPosts_cover " src="https://yremp.live/wp-content/uploads/2019/08/sea-e1566225879119.jpg"><div class="relatedPosts_title">Jsproxy 通过JS实现浏览器在线代理</div></a></div></div><div class="clear_both"></div></div></div></div><footer><div id="footer"><div class="copyright">&copy;2018 - 2019 By yremp</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><a id="to_comment" href="#post-comment"><i class="scroll_to_comment fa fa-comments"></i></a><i class="fa fa-book" id="readmode" title="Read Mode"> </i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion">繁</a><i class="nightshift fa fa-moon-o" id="nightshift" title="Dark Mode"></i></section><div class=" " id="post_bottom"><div id="post_bottom_items"><a id="mobile_to_comment" href="#post-comment"><i class="mobile_scroll_to_comment fa fa-comments"></i></a><i class="fa fa-list" id="mobile_toc"></i><div id="toc_mobile"><div class="toc_mobile_headline">Catalog</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">安装流程介绍：</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">Step 1：安装Git工具</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">Step 2：注册Github账号</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text">Step 3：下载配置Nodejs</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">4.1.</span> <span class="toc_mobile_items-text">下载Nodejs</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">4.2.</span> <span class="toc_mobile_items-text">配置Nodejs环境变量</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">5.</span> <span class="toc_mobile_items-text">Step :4：安装Hexo</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">6.</span> <span class="toc_mobile_items-text">Step 5：SSH配置</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">7.</span> <span class="toc_mobile_items-text">Step 6：将博客部署到Github</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">7.1.</span> <span class="toc_mobile_items-text">新建仓库</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">7.2.</span> <span class="toc_mobile_items-text">修改配置文件</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#null"><span class="toc_mobile_items-number">7.3.</span> <span class="toc_mobile_items-text">开始部署</span></a></li></ol></li></ol></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/nightshift.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script></body></html>
