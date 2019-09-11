@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-09T15:42:23.996Z</updated>
+  <updated>2019-09-11T05:02:20.603Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jsproxy +GitHub Pages实现在线代理</title>
+    <link href="/2019/09/10/jsproxy-github/"/>
+    <id>/2019/09/10/jsproxy-github/</id>
+    <published>2019-09-10T09:16:01.000Z</published>
+    <updated>2019-09-11T05:02:20.603Z</updated>
+    
+    <content type="html"><![CDATA[<!-- wp:paragraph --><p>之前已经写了Jsproxy+Cloudflare 实现浏览器在线代理，后来我自己又测试了Jsproxy +GitHub Pages实现在线代理 ，这个速度我只能说不是很稳定，和网络运营商也有一定关系，当然了毕竟是免费的，不要求太多。</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>前提环境：</h3><!-- /wp:heading --><!-- wp:list {"ordered":true} --><ol><li>已经有GitHub账号【必须】</li><li>已经新建了io仓库(例:yremp2.github.io)，开启这个仓库的GitHub Pages服务【必须】</li><li>SSH Key配置完成【非必要】</li></ol><!-- /wp:list --><!-- wp:heading {"level":3} --><h3>下载项目：</h3><!-- /wp:heading --><!-- wp:heading {"level":4} --><h4>下载地址</h4><!-- /wp:heading --><!-- wp:list {"ordered":true} --><ol><li>地址1：<a href="https://github.com/yremp2/yremp2.github.io" target="_blank" rel="noopener">我的io仓库</a></li><li>地址2：<a href="https://github.com/yremp2/jsproxy" target="_blank" rel="noopener">我的仓库</a>(Fork于官方仓库)</li><li> 地址3：<a href="https://github.com/EtherDream/jsproxy" target="_blank" rel="noopener">官方地址</a> </li></ol><!-- /wp:list --><!-- wp:heading {"level":4} --><h4>下载方式</h4><!-- /wp:heading --><!-- wp:list {"ordered":true} --><ol><li>最快速的方法是直接clone或者下载我的io仓库</li><li>可以去地址2直接下载我已经切换好分支的项目</li><li>  如果从地址1，你需要自己去Fork一份，然后切将gh-pages设置为主分支，然后下载项目(zip或者git clone)  </li></ol><!-- /wp:list --><!-- wp:heading {"level":3} --><h3>修改配置文件</h3><!-- /wp:heading --><!-- wp:paragraph --><p>下载完成后，找到项目根目录下的conf.js,找到下面代码修改默认节点</p><!-- /wp:paragraph --><!-- wp:code --><pre class="wp-block-code"><code>. /**   * 默认节点   */  node_default: 'mysite',</code></pre><!-- /wp:code --><!-- wp:paragraph --><p>可以修改为</p><!-- /wp:paragraph --><!-- wp:list {"ordered":true} --><ol><li>'demo-hk'  -香港节点</li><li>'demo-sg'   -新加坡节点</li><li> 'cfworker' -cloud flare</li></ol><!-- /wp:list --><!-- wp:heading {"level":3} --><h3>部署到Github</h3><!-- /wp:heading --><!-- wp:heading {"level":4} --><h4>1.clone io 仓库</h4><!-- /wp:heading --><!-- wp:image {"id":1382} --><figure class="wp-block-image"><img src="https://yremp.live/wp-content/uploads/2019/09/image-14.png" alt class="wp-image-1382"></figure><!-- /wp:image --><!-- wp:heading {"level":4} --><h4>2.复制项目</h4><!-- /wp:heading --><!-- wp:paragraph --><p>把下载并修改的Jsproxy项目复制到clone的yremp2.github.io仓库(示例</p><!-- /wp:paragraph --><!-- wp:image {"id":1384} --><figure class="wp-block-image"><img src="https://yremp.live/wp-content/uploads/2019/09/image-16-1024x255.png" alt class="wp-image-1384"></figure><!-- /wp:image --><!-- wp:heading --><h2>3.commit</h2><!-- /wp:heading --><!-- wp:code --><pre class="wp-block-code"><code>git commit -m "messages"</code></pre><!-- /wp:code --><!-- wp:heading --><h2>4.Push</h2><!-- /wp:heading --><!-- wp:paragraph --><p>推到github 远程 io仓库</p><!-- /wp:paragraph --><!-- wp:code --><pre class="wp-block-code"><code>git push</code></pre><!-- /wp:code --><!-- wp:heading {"level":3} --><h3>完成</h3><!-- /wp:heading --><!-- wp:paragraph --><p>访问 http://github用户名.github.io 即可开始访问</p><!-- /wp:paragraph -->]]></content>
+    
+    <summary type="html">
+    
+      之前已经写了Jsproxy+Cloudflare 实现浏览器在线代理，后来我自己又测试了 Jsproxy +GitHub Pages实现在线代理 ，这个速度我只能说不是很稳定，和网络运营商也有一定关系，当然了毕竟是免费的，不要求太多。
+    
+    </summary>
+    
+    
+      <category term="代理" scheme="/categories/%E4%BB%A3%E7%90%86/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring Boot连接远程服务器MySQL数据库</title>
@@ -459,29 +482,6 @@
     
     
       <category term="Hexo" scheme="/categories/Hexo/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Sakura安装Gitalk</title>
-    <link href="/2019/07/01/gitalk/"/>
-    <id>/2019/07/01/gitalk/</id>
-    <published>2019-07-01T10:16:01.000Z</published>
-    <updated>2019-09-08T15:57:05.983Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a>Gitalk</h4><p>  Gitalk 是一款基于GitHub使用的评论插件，使用起来非常方便。最近Valine出了一些问题，无法正常使用，虽然官网给了修复的方法，但是我不想再使用Valine，于是便安装了Gitalk这款插件，下面给大家带来 <font color="#FF1493"> Sakura主题</font>安装gitalk的教程 <br></p><h4 id="申请-OAuth-Apps"><a href="#申请-OAuth-Apps" class="headerlink" title="申请 OAuth Apps"></a>申请 OAuth Apps</h4><p>首先登Github主页，点击你的头像依次点击<font color="#ff6633">Settings-&gt;Developer settings-&gt;OAuth Apps-&gt; new OAuth Apps</font><br>将会到下面的界面：</p><p><img src="https://cdn.jsdelivr.net/gh/yremp/resource@4.5/img/posts/gitalkapply01.png" alt></p><p>里面几个参数介绍如下：</p><ol><li>Application name:应用名称，这个你自己随便写，合法就行</li><li>Homepage URL:这个填写你的博客地址例如：<a href="https://yremp.github.io" target="_blank" rel="noopener">https://yremp.github.io</a></li><li>Application description:应用描述随便填</li><li>Authorization callback URL:如果你绑定了个性域名一定要填写个性域名,例如：<a href="https://yremp.club" target="_blank" rel="noopener">https://yremp.club</a> </li></ol><p><img src="https://cdn.jsdelivr.net/gh/yremp/resource@4.4/img/posts/key.png" alt></p><p>申请完成以后有两个重要参数Client ID、Client Secret后面会使用：<br></p><p>如下所示：<br><img src="https://cdn.jsdelivr.net/gh/yremp/resource@4.4/img/posts/gitalkapply02.png" alt></p><h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>做完上面的准备工作接下来就是修改配置文件:在  <font color="#ff6633">\themes\Sakura</font> 下找到<font color="#ff6633"> _config.yml</font> 。打开，在最下方加入如下代码：</p><pre><code>gitalk:    # 是否自动展开评论框    autoExpand: true    # 应用编号    clientID: &#39;8972e4300aeaabe97cc0&#39;    # 应用秘钥    clientSecret: &#39;988d6142b09dd52db79a2b832ba8f068df13a99a&#39;    # issue仓库名    repo: &#39;yremp.github.io&#39;    # Github名    owner: &#39;yremp&#39;    # Github名    admin: [&#39;yremp&#39;]    # Ensure uniqueness and length less than 50    id: location.pathname    # Facebook-like distraction free mode    distractionFreeMode: false</code></pre><p>对照注释修改：</p><ol><li>clientID：       申请的应用ID</li><li>clientSecret：   申请的应用密匙</li><li>repo：           issue仓库名</li><li>owner：          你的github用户名</li><li>admin：          你的github用户名</li></ol><h4 id="修改布局文件"><a href="#修改布局文件" class="headerlink" title="修改布局文件"></a>修改布局文件</h4><p>接着，在 <font color="#ff6633">\themes\Sakura\layout_partial</font> 下找到<font color="#ff6633">comment.ejs</font>将里面的代码替换为如下代码：</p><pre><code>&lt;% if ( post.comments) { %&gt;  &lt;script src=&quot;https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.1/gitalk.js&quot;&gt;&lt;/script&gt;  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.3/gitalk.css&quot;&gt;  &lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;  &lt;script type=&quot;text/javascript&quot;&gt;      var gitalk = new Gitalk({          clientID: &#39;&lt;%= theme.gitalk.clientID %&gt;&#39;,          clientSecret: &#39;&lt;%= theme.gitalk.clientSecret %&gt;&#39;,          id: window.location.pathname,          repo: &#39;&lt;%= theme.gitalk.repo %&gt;&#39;,          owner: &#39;&lt;%= theme.gitalk.owner %&gt;&#39;,          admin: &#39;&lt;%= theme.gitalk.admin %&gt;&#39;      })      gitalk.render(&#39;gitalk-container&#39;)    &lt;/script&gt;&lt;% } %&gt;</code></pre><p>里面的js以及css文件是我从官方找的并且放在我的github上面，你可以去找官方的链接下载放到自己github上面，也可以直接用我的。然后，在 <font color="#ff6633">\themes\Sakura\layout_partial </font>下找到<font color="#ff6633">footer.ejs</font>在里面加入评论区容器：</p><pre><code>&lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;</code></pre><p>位置合适就好，可以参考我的：</p><p><img src="https://cdn.jsdelivr.net/gh/yremp/resource@4.4/img/posts/p1.png" alt></p><p>继续在这个文件里添加JS链接：</p><pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.1/gitalk.js&quot;&gt;&lt;/script&gt;</code></pre><p>位置可以参考我的：</p><p><img src="https://cdn.jsdelivr.net/gh/yremp/resource@4.4/img/posts/p2.png" alt></p><p>最后，在 <font color="#ff6633">\themes\Sakura\layout_partial</font> 下找到<font color="#ff6633">head.ejs</font>加入如下代码：</p><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.3/gitalk.css&quot;&gt;</code></pre><p>可以参考我的：</p><p><img src="https://cdn.jsdelivr.net/gh/yremp/resource@4.4/img/posts/p3.png" alt></p><h4 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h4><p>接下来就是：<br></p><ol><li>hexo clean</li><li>hexo g</li><li>hexo d</li></ol><p>大功告成，效果如下：<br><br><img src="https://cdn.jsdelivr.net/gh/yremp/resource@4.6/img/posts/style.png" alt></p><center>如果有什么问题，请到评论区留言。转载请标明作者和原文地址</center>]]></content>
-    
-    <summary type="html">
-    
-      Hexo-Sakura安装Gitalk教程
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="web" scheme="/tags/web/"/>
